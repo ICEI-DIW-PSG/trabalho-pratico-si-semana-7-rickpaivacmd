@@ -1,166 +1,101 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>F1 Insights — Cobertura da temporada</title>
-<meta name="description" content="F1 Insights: notícias, análises, calendário e destaques da Fórmula 1.">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="./styles.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>F1 Insights — Cobertura da temporada</title>
+  <link rel="stylesheet" href="./styles.css">
+  <meta name="description" content="F1 Insights: notícias, análises, calendário e destaques da Fórmula 1.">
 </head>
-<body class="bg-dark text-light">
+<body>
 
-<header class="border-bottom border-secondary sticky-top" style="background:#0d0f13;">
-  <div class="container d-flex align-items-center justify-content-between" style="min-height:66px;">
-    <h1 class="m-0 fs-4 logo">F1 <span>Insights</span></h1>
-    <nav aria-label="principal">
-      <ul class="nav nav-list m-0">
-        <li class="nav-item"><a class="nav-link text-light active" href="#" aria-current="page">Home</a></li>
-        <li class="nav-item"><a class="nav-link text-light" href="#destaques">Destaques</a></li>
-        <li class="nav-item"><a class="nav-link text-light" href="#analises">Análises</a></li>
-        <li class="nav-item"><a class="nav-link text-light" href="#contato">Contato</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
+  <header class="site-header">
+    <div class="container head-wrap">
+      <h1 class="logo">F1 <span>Insights</span></h1>
+      <nav class="site-nav" aria-label="principal">
+        <ul class="nav-list">
+          <li><a href="#" aria-current="page">Home</a></li>
+          <li><a href="#destaques">Destaques</a></li>
+          <li><a href="#analises">Análises</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-<main>
+  <main>
 
-<section class="py-4 border-bottom border-secondary">
-  <div class="container">
-    <div class="row g-3 align-items-center">
-      <div class="col-12 col-lg-6">
-        <h2 class="h2 mb-2">Velocidade, estratégia e pura emoção</h2>
-        <p class="text-secondary mb-3">
-          Acompanhe a temporada com resumos de corrida, movimentos de equipes, pilotos em ascensão e tendências técnicas do grid.
-        </p>
-        <div class="d-flex flex-wrap gap-2">
-          <a class="btn btn-danger" href="https://www.formula1.com/en/latest.html" target="_blank" rel="noopener">Últimas notícias (F1)</a>
-          <a class="btn btn-outline-light" href="https://www.formula1.com/en/results.html" target="_blank" rel="noopener">Resultados oficiais</a>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <h2>Velocidade, estratégia e pura emoção</h2>
+          <p>Acompanhe a temporada com resumos de corrida, movimentos de equipes, pilotos em ascensão e tendências técnicas do grid.</p>
+          <div class="hero-cta">
+            <a class="btn" href="https://www.formula1.com/en/latest.html" target="_blank" rel="noopener">Últimas notícias (F1)</a>
+            <a class="btn ghost" href="https://www.formula1.com/en/results.html" target="_blank" rel="noopener">Resultados oficiais</a>
+          </div>
         </div>
+        <figure class="hero-art" aria-hidden="true"></figure>
       </div>
-      <div class="col-12 col-lg-6">
-        <!-- Use o mesmo arquivo que você já tem. Se estiver em 'Images' com I maiúsculo, ajuste o caminho aqui. -->
-        <img src="images/LeclercPDS.jpg" alt="Monoposto em ação" class="img-fluid rounded-3 border border-secondary w-100" style="height:240px; object-fit:cover;">
+    </section>
+
+    <section id="destaques" class="container section">
+      <header class="section-head">
+        <h3>Destaques</h3>
+      </header>
+
+      <div id="cards" class="grid-3"></div>
+    </section>
+
+    <section id="analises" class="container section">
+      <header class="section-head">
+        <h3>Análises & leituras recomendadas</h3>
+      </header>
+
+      <div class="two-col">
+        <article class="card read">
+          <h4>Verstappen admite culpa em confronto com Russell na Espanha</h4>
+          <p>Tetracampeão ficou extremamente frustrado durante a corrida, mas depois entendeu a gravidade de sua manobra</p>
+          <a class="link" href="https://www.formula1.com/en/racing.html" target="_blank" rel="noopener">Entenda o caso!</a>
+        </article>
+
+        <article class="card read">
+          <h4>Ayrton Senna</h4>
+          <p>Ayrton Senna (1960-1994) foi um piloto brasileiro de Fórmula 1. Ídolo do automobilismo, conquistou três títulos mundiais e marcou a história da categoria.</p>
+          <a class="link" href="https://www.ebiografia.com/ayrton_senna/" target="_blank" rel="noopener">Conheça o homem!</a>
+        </article>
       </div>
+    </section>
+
+    <section id="contato" class="container section">
+      <h3>Receba os insights por e-mail</h3>
+      <form class="form-news" action="#" method="post">
+        <div class="field">
+          <label for="nome">Nome</label>
+          <input id="nome" name="nome" type="text" placeholder="Seu nome" required>
+        </div>
+        <div class="field">
+          <label for="email">E-mail</label>
+          <input id="email" name="email" type="email" placeholder="voce@email.com" required>
+        </div>
+        <div class="actions">
+          <button type="submit">Assinar</button>
+        </div>
+      </form>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container foot-wrap">
+      <small>© 2025 — F1 Insights</small>
+      <ul class="social">
+        <li><a href="https://www.formula1.com/en/latest.html" target="_blank" rel="noopener">F1 News</a></li>
+        <li><a href="https://www.formula1.com/en/results.html" target="_blank" rel="noopener">Resultados</a></li>
+        <li><a href="https://www.formula1.com/" target="_blank" rel="noopener">formula1.com</a></li>
+      </ul>
     </div>
-  </div>
-</section>
-
-<section id="destaques" class="py-4 section">
-  <div class="container">
-    <header class="d-flex align-items-end justify-content-between mb-3 section-head">
-      <h3 class="m-0">Destaques</h3>
-    </header>
-
-    <div class="row g-3">
-      <!-- Not1 - Leclerc -->
-      <div class="col-12 col-md-6 col-lg-4">
-        <article class="card h-100 text-light" style="background:#131721; border:1px solid #232833;">
-          <img class="card-img-top" src="images/Card1 Leclerc.avif" alt="O homem da ferrari" loading="lazy" style="aspect-ratio:16/9; object-fit:cover;">
-          <div class="card-body pad">
-            <h4 class="h5 card-title">Leclerc está otimista sobre as chances da Ferrari em Cingapura, apesar do TL2 "muito confuso"</h4>
-            <p class="card-text">Apesar de um difícil Treino Livre 2 em Cingapura, Charles Leclerc e Lewis Hamilton estavam otimistas com as chances da Ferrari neste fim de semana.</p>
-            <a class="link" href="https://www.formula1.com/en/latest/article/the-pace-is-in-the-car-leclerc-optimistic-on-ferraris-chances-in-singapore.2KXkID2retABHhc4enoIao" target="_blank" rel="noopener">Ler mais na F1</a>
-          </div>
-        </article>
-      </div>
-
-      <!-- Not 2 Roscoe -->
-      <div class="col-12 col-md-6 col-lg-4">
-        <article class="card h-100 text-light" style="background:#131721; border:1px solid #232833;">
-          <img class="card-img-top" src="images/Roscoe.avif" alt="Roscoe #Luto" loading="lazy" style="aspect-ratio:16/9; object-fit:cover;">
-          <div class="card-body pad">
-            <h4 class="h5 card-title">Hamilton fala sobre apoio 'esmagador' desde a morte de seu cachorro Roscoe</h4>
-            <p class="card-text">Lewis Hamilton se abriu sobre o apoio que recebeu após a perda de seu amado cachorro Roscoe.</p>
-            <a class="link" href="https://www.formula1.com/en/latest/article/hamilton-opens-up-on-overwhelming-support-since-passing-of-his-dog-roscoe.3ZpiyeJp9kVIm1SHgO3HOg" target="_blank" rel="noopener">#LUTO</a>
-          </div>
-        </article>
-      </div>
-
-      <!-- Noti 3 Gab -->
-      <div class="col-12 col-md-6 col-lg-4">
-        <article class="card h-100 text-light" style="background:#131721; border:1px solid #232833;">
-          <img class="card-img-top" src="images/Bortoleto.avif" alt="Futuro do Brasil!" loading="lazy" style="aspect-ratio:16/9; object-fit:cover;">
-          <div class="card-body pad" 
-          > 
-            <h4 class="h5 card-title">Wheatley e logia Bortoleto como "o verdadeiro negócio" com a Sauber se preparando para a transição da Audi</h4>
-            <p class="card-text">Gabriel Bortoleto impressionou durante sua campanha de estreia na Fórmula 1 com a Sauber e começou a aumentar sua pontuação.</p>
-            <a class="link" href="https://www.msn.com/pt-br/carros/noticias/f1-verstappen-admite-culpa-em-confronto-com-russell-na-espanha/ar-AA1Nf12u?ocid=BingNewsVerp" target="_blank" rel="noopener">Gab futuro do BR</a>
-          </div>
-        </article>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="analises" class="py -4 section">
-  <div class="con tainer">
-    <header class="mb-3  section-head">
-      <h3 class="m-0">Análises  &  leituras recomendadas</h3>
-    </header>
-
-    <div class="row g-3">
-      <div class="col-12 col-lg -6" >
-        <article class="card h-100 text-light" style="background:#131721; border:1px solid #232833;">
-          <div class="card-body">
-            <h4 class="h5 card-title">Verstappen admi te culpa em confronto com Russell na Espanha</h4>
-            <p class="card-text">Tetracampeão ficou extremamente frustrado durante a corrida, mas depois entendeu a gravidade de sua manobra</p>
-            <a class="link" href = "https://www.formula1.com/en/racing.html" target="_blank" rel="noopener">Entenda o caso!</a>
-          </div>
-        </article>
-      </div>
-
-      <div class="col-12 col-lg-6">
-        <article class="card h-100 text-light" style="background:#131721; border:1px solid #232833;">
-          <div class="card-body">
-            <h4 class="h5 card-title">Ayrton Senna</h4>
-            <p class="card-text" >Ayrton Senna (1960-1994) foi um  piloto brasileiro de Fórmula 1. Ídolo do automobilismo conquistou três vezes o campeonato mundial, em 1988, 1990 e 1991. Morreu no auge da carreira, pilotando no circuito de Ímola, na Itália..
-
-            </p>
-            <a class="link" href="https://www.ebiografia.com/ayrton_senna/" target="_blank" rel="noopener">Conheça O HOMEM!!!</a>
-          </div>
-        </article>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="contato" class="py-4 section border-top border-secondary">
-  <div class="container">
-    <h3>Receba os insights por e-mail</h3>
-    <form class="row g-3 align-items-end" action="#" method="post">
-      <div class="col-12 col-md-5" 
-      >
-        <label for="nome" class="form-label">Nome</label>
-        <input id="nome" name="nome" type="text" class="form-control bg-dark text-light border-secondary" placeholder="Seu nome" required>
-      </div>
-      <div class="col-12 col-md-5">
-        <label for="email" class="form-label">E-mail</label>
-        <input id="email" name="email" type="email" class="form-control bg-dark text-light border-secondary" placeholder="voce@email.com" required>
-      </div>
-      <div class="col-12 col-md-2 d-grid"
-      >
-        <button type="submit" class="btn btn-danger">Assinar</button>
-      </div>
-    </form >
-  </div>
-</section>
-
-</main>
-
-<footer class="border-top border-secondary py-3 mt-2" style="background:#0d0f13;">
-  <div class="container d-flex align-items-center justify-content-between flex-wrap gap-2">
-    <small>© 2025 — F1 Insights</small>
-    <ul class="nav social" 
-    >
-      <li class="nav-item"><a class="nav-link text-light" href="https://www.formula1.com/en/latest.html" target="_blank" rel="noopener">F1 News</a></li>
-      <li class="nav-item"><a class="nav-link text-light" href="https://www.formula1.com/en/results.html" target="_blank" rel="noopener">Resultados</a></li>
-      <li class="nav-item"><a class="nav-link text-light" href="https://www.formula1.com/" target="_blank" rel="noopener">formula1.com</a></li>
-    </ul>
-  </div>
-</footer>
-
-<script src= "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </footer>
+  <script src="./app.js"></script>
 </body>
 </html>
