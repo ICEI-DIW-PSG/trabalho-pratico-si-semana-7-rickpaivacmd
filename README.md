@@ -13,32 +13,33 @@ Leia o enunciado completo no Canvas.
 
 ## Informações Gerais
 
-- Nome:
-- Matricula:
-- Proposta de projeto escolhida:
-- Breve descrição sobre seu projeto:
+- Nome: Henrique Paiva Maciel Ferreira
+- Matricula:: 897765
+- Site de informações para fãs de F1
+- Breve descrição sobre seu projeto: O F1 Insights é um site voltado para fãs da Fórmula 1, com informações atualizadas sobre corridas, equipes, pilotos e análises técnicas da temporada. O objetivo é oferecer uma visão clara e envolvente do mundo da F1, reunindo notícias, curiosidades e destaques em um só lugar.
 
 ## Print da Home-Page
 
-<<  COLOQUE A IMAGEM AQUI >>
+![homepage](C:\Users\rickp\github-classroom\ICEI-DIW-PSG\trabalho-pratico-si-semana-7-rickpaivacmd\public\images\homepage.png)
 
 ## Print da página de detalhes do item
 
-<<  COLOQUE A IMAGEM AQUI >>
+![detalhes](C:\Users\rickp\github-classroom\ICEI-DIW-PSG\trabalho-pratico-si-semana-7-rickpaivacmd\public\images\Detalhes.png)
 
 ## Cole aqui abaixo a estrutura JSON utilizada no app.js
 
 ```javascript
 const dados = [
-  {
-    "id": 1,
-    "titulo": "Prefeitura Lança Plano de Mobilidade Urbana",
-    "descricao": "Novo plano do transporte público.",
-    "conteudo": "A Prefeitura apresentou nesta segunda-feira um novo plano de mobilidade urbana.",
-    "categoria": "Cidades",
-    "autor": "Joana Ribeiro",
-    "data": "2025-03-30",
-    "imagem": "img/mobilidade.jpg"
+{
+    id: 1,
+    titulo: "Leclerc otimista em Cingapura",
+    descricao: "Mesmo com TL2 confuso, Ferrari projeta bom ritmo no fim de semana.",
+    conteudo: "Apesar de um TL2 difícil em Cingapura, Leclerc e a equipe demonstraram confiança no acerto para quali e corrida. Foco em janelas de pneus e stints longos.",
+    categoria: "Corridas",
+    autor: "Equipe F1 Insights",
+    data: "2025-03-30",
+    imagem: "images/Card1 Leclerc.avif",
+    fonte: "https://www.formula1.com/en/latest.html"
   }
 ]
 ```
